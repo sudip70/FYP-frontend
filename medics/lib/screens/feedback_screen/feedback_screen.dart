@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medics/constants.dart';
 import 'package:medics/screens/feedback_screen/feedback_sender.dart';
 
 class FeedbackScreen extends StatefulWidget {
@@ -18,9 +19,9 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Column(
-          children: const [Text("Medics"), Text("Because Your Life Matters")],
+          children: const [Text("Medics"), Text("'Because Your Life Matters'")],
         ),
-        backgroundColor: Colors.green,
+        backgroundColor: kPrimaryColor,
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -57,7 +58,7 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
                 ),
                 TextFormField(
                   controller: feedbackController,
-                  maxLines: 3,
+                  maxLines: 5,
                   decoration: const InputDecoration(
                     hintText: "Feedback",
                   ),
@@ -69,18 +70,18 @@ class _FeedbackScreenState extends State<FeedbackScreen> {
                   width: 150,
                   child: ElevatedButton(
                     onPressed: () {
-                      if ((nameController.text != "null") &&
+                      if ((nameController.text != null) &&
                           (emailController.text != null) &&
                           (feedbackController.text != null)) {
                         feedBackBot(nameController.text,
                             feedbackController.text, emailController.text);
                       } else {
-                        print("please enter daa first");
+                        print("please enter data first");
                       }
                     },
                     child: const Text("Send"),
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.green,
+                      primary: kPrimaryColor,
                     ),
                   ),
                 )

@@ -4,6 +4,7 @@ import 'package:medics/screens/feedback_screen/feedback_screen.dart';
 import 'package:medics/screens/login_screen/login_screen.dart';
 //import 'package:medics/screens/welcome_screen/welcome_screen.dart';
 import 'package:medics/constants.dart';
+import 'package:medics/screens/signup_screen/signup_screen.dart';
 import 'package:medics/screens/welcome_screen/welcome_screen.dart';
 
 void main() => runApp(MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: FeedbackScreen(),
+      home: SignupScreen(),
       routes: {
         AppPath.loginpage: (context) => LoginScreen(),
         AppPath.feedbackpage: (context) => FeedbackScreen()
